@@ -26,29 +26,6 @@ app.get("/", (req, res) => {
 
 app.use("/api/auth", authRouter);
 
-// Set up OpenAI
-// const openai = new OpenAI({
-//   apiKey: process.env.OPENAI_API_KEY
-// });
-// OpenAI chat endpoint
-// app.post("/chat", async (req, res) => {
-//   const { prompt } = req.body;
-
-//   try {
-//     const response = await openai.chat.completions.create({
-//       model: "gpt-3.5-turbo",
-//       messages: [{ role: "user", content: prompt }],
-//       max_tokens: 512,
-//       temperature: 0
-//     });
-
-//     res.send(response.choices[0].message.content);
-//   } catch (error) {
-//     console.error("Error:", error.response?.data || error.message || error);
-//     res.status(500).send("Error occurred while processing the request.");
-//   }
-// });
-
 // Server
 app.listen(PORT, () => {
   console.log(`Server Running on port ${PORT}`);
