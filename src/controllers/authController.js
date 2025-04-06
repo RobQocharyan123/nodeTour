@@ -83,7 +83,7 @@ export const login = async (req, res) => {
       maxAge: 7 * 24 * 60 * 60 * 1000
     });
 
-    return res.json({ success: true });
+    return res.json({ success: true, token });
   } catch (err) {
     return res.json({ success: false, message: err.message });
   }
